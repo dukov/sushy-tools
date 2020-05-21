@@ -364,7 +364,6 @@ class LibvirtDriver(AbstractSystemsDriver):
 
         return boot_source_target
 
-    @power_cycle
     def set_boot_device(self, identity, boot_source):
         """Get/Set computer system boot device name
 
@@ -474,7 +473,6 @@ class LibvirtDriver(AbstractSystemsDriver):
 
             return boot_mode
 
-    @power_cycle
     def set_boot_mode(self, identity, boot_mode):
         """Set computer system boot mode.
 
@@ -720,7 +718,6 @@ class LibvirtDriver(AbstractSystemsDriver):
         """
         return self._process_bios(identity)
 
-    @power_cycle
     def set_bios(self, identity, attributes):
         """Update BIOS attributes
 
